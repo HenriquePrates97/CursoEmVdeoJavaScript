@@ -8,5 +8,68 @@
 </head>
 <body>
     <h1>Olá, mundo</h1>
+        <p>Vamos começar mais um curso gratuito com o maravilhoso Guanabara, que chamo carinhosamente de Guabanara. E para prossegurimos vamos aprender o conceito de comentários em JavaScript</p>
+    <h2>Comentários em linha no código.</h2>
+        <p>Para fazermos um comentário apenas em uma linha, podemos utilizar barra barra antes do que escrevemos, isso torna o que foi escrito na linha algo que não é identificado pelo navegador e serve apenas para o programador de localizar dentro do código.</p>
+    <h2>Comentários em bloco.</h2>
+        <p>Caso tenhamos que adicionar um comentário que envolva mais de uma linha, para não precisarmos colocar barra barra em todas as linhas, podemos apenas escrever barra aterisco onde começa o comentário e asterisco barra onde queremos que o código termine. Serve também para CSS.</p>
+    <h1>Vamos colocar em prática alguns códigos em JavaScript que aprendemos na primeira aula</h1>
+        <p>Para exibirmos um alerta na tela, utlizamos o primeiro código digitado no campo script abaixo</p>
+        <p>Para exibirmos uma caixa de confirmação para o usuário, utilizamos o segundo código</p>
+        <p>Para pedirmos para o usuário digitar algo, usamos o terceiro código</p>
+    <h1>Váriaveis em JavaScript</h1>
+        <p>Primeira regrinha básica do JS é que, quando vemos apenas um sinal de igual em uma linha de código, ela representa um recebimento de dado, então, podemos, ou melhor, até devemos, falar que tal variável recebe tal valor, e não que é igual a tal valor.</p>
+        <p>Sinal de mais (+) é utilizado para concatenação de variáveis, sejam com textos prontos ou outras variáveis</p>
+        <p>Quais são as formas que posso nomear uma variável?</p>
+        <ul>
+            <li>Começar coom letra, cifrão ou underline</li>
+            <li>Não podem começar com números</li>
+            <li>É possível usar letras ou números</li>
+            <li>É possível usar acentos ou símbolos</li>
+            <li>Não podem contem espaços</li>
+            <li>Não podem ser palavras reservados da programação</li>
+        </ul>
+    <h2>Abrindo o node no VSC</h2>
+        <p>Para abrirmos o node.js diretamente no Visual Studio Code vamos até a opção Terminal, na parte superior da tela, abrimos o terminal e digitamos node e damos enter. Pronto, estamos dentro da interface do node diretamente pelo Visual Studio. Para fecharmos o node, tanto por aqui quanto se aberto pelo próprio software. digitamos .exit e damos enter. E para fechar o terminar do VSC utilizamos apenas exit e damos enter.</p>
+        <p>Para limpar o terminal caso esteja com muitos códigos, basta apertar control l.</p>
+    <h2>Valores suportados por variáveis</h2>
+        <p>Os tipos primitivos primordiais de variável são: number, string e boolean</p>
+    <h1>Conversão de tipos de variáveis.</h1>
+        <p>No exemplo abaixo, nos deparamos com um pequeno problema: como o comando window.prompt sempre retorna um valor string para a variável, mesmo que tenhamos digitado um número, o simbolo de + dentro do alert acaba fazendo a concatenação de n1 e n2 em vez da soma. Então o resultado mostrado é a junção de um número com o outro, e não a soma, mesmo que na variável de soma esteja claro que desejamos somar. Isso acontece devido à uma confusão causada pelo fato de que as variáveis receberam um valor string e não number. Para resolvermos isso e fazermos com o que soma seja feita, devemos converter de string para number o que for digitado no window.prompt. Há três maneiras para fazermos essa conversão. Só um adendo, muito provavelmente podemos fazer conversão com vários outros tipos de variáveis para, estou tratando da mudança de string para number aqui, pois é mais simples de entender essa opção e também pelo fato de o exemplo demonstrado ter trazido essa questão no momento.</p>
+        <h2>Number.parseInt(n)</h2>
+            <p>Se desejamos que a string se torne um número inteiro, ou seja, não mostre números com vírgula, fazemos a conversão colocando o window.prompt() dento do parenteses de Number.parseInt(). Isso fará uma conversão do valor antes mesmo de o mesmo ir para a variável. Vide exemplo abaixo. Vale ressaltar que JS é uma linguagem case sensitive, ou seja, maiusculas e minusculas importam, então deve-se observar essa diferença e escrever o código exatamente como esta no título.</p>
+        <h2>Number.parseFloat(n)</h2>
+            <p>Assim como o parseInt, o parseFloat faz a conversão de uma variável para number, mas a diferença entre uma e outra é que a conversão com float permite que a variável receba um número real, ou seja, um número com virgula, coisa que o parseInt não permite. Sendo assim, se sua variável precisa receber um valor real, a melhor forma de converter é com parseFloat.</p>
+        <h2>Number(n)</h2>
+            <p>Mas se você não quer determinar se a variável convertida recebera um valor inteiro ou real, podemos usar apenas Number() e deixar que a própria linguagem identifique o valor recebido e faça a conversão adequada, independente se o número for real ou inteiro. Mas caso haja a necessidade de forçar uma declaração de um número real ou inteiro, devemos colocar parseInt ou parseFloat.</p>
+        <h2>String(n)</h2>
+            <p>A conversão para string também é possivel, caso tenhamos, por exemplo, uma variável do tipo number e desejamos converte-la para string, podemos utilizar String() assim como fizemos para conversão para number.</p>
+        <h2>n.toString()</h2>
+            <p>Também é possível fazer a conversão para string através de colocar o que vai ser convertido antes, colocar um ponto e adicionar toString() ao final.</p>
+        <h1>Formatação de strings</h1>
+            <p>No exemplo abaixo, para exibir o resultado da soma do número, utilizamos textos auxíliares para identifircarmos o que estamos mostrando. Para isso, foi utilizado a técnica de concatenação usando o simbolo de +, que já mencionamos antes. Dessa forma, abrimos aspas simples ou duplas, em JS tanto faz, adicionamos o texto auxiliar, fechamos as aspas e colocamos o sinal de adição juntamente com a o identificador da variável que desejamos mostrar, gerando assim o nosso window.alert. explicando: fulando, o resultado dessa soma é identificador da variável.</p>
+            <p>Caso tenhamos muitas variáveis para exibir, gerando assim uma grande quantidade de abertura e fechamento de aspas, muitos simbolos de adição, podemos utilizar a forma mais atual de formatação de string, chamada de template string.</p>
+            <h2>Template string</h2>
+                <p>Para a utilização de template strings e deixar os textos auxiliares mais práticos de serem usados, aplicamos a seguinte técnica: entre crase (``) escrevemos o texto auxiliar e, a cada variavél que queremos adicionar, utilizamos o simbolo de cifrão ($) antes da variável e colocamos o nome da variável dentro de chaves após o cifrão. O cifrão com as chaves é um placeholder, que delimita o local que devemos adicionar a variável. Exemplo: `${nome}, o resultado dessa soma é ${soma}`</p>
+            <h2>Algumas outras funções para formatar strings</h2>
+                <p>Para sabermos a quantidade de letras que uma string tem, utilizamos o nome da variável, ponto e length, ficando, var.lenght, não tendo necessidade de abrir e fechar parenteses ao final de declaração.</p>
+                <p>Também é possivel colocar uma string toda em letras maiúsculas, fazendo o mesmo procedimento anterior, mas adicionando após o ponto toUperCase(), ficando var.toUperCase(), dessa vez havendo a necessidade de abrir e fechar parenteses ao final da declaração.</p>
+                <p>Para colocar a string toda com letras minusculas, o procedimento é igual ao de letras maiusculas, porem o comando é toLowerCase(), ficando var.toLowerCase().</p>
+            <h2>Formatando numbers</h2>
+                <p>Algumas formatações são possíveis para as variáveis do tipo number, uma delas é a opção de aumentar o tamanho da casa decimal de um número utilizando toFixed(n) onde dentro do paranteses vai a quantidade de casas decimais.</p>
+                <p>Outra forma de formatar um number é caso ele seja um valor monetário, onde podemos utilizar a seguinte linha de código para mostrar o número já com a formatação da moeda de determinado país: var.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})</p>
+<script>
+    //window.alert('Vamos começar essa bagaça')
+    //window.confirm('Está gostando do curso?')
+    //window.prompt('Digite seu nome!')
+    var nome = window.prompt('Digite seu nome')
+    //var n1 = window.prompt('Digite um número') linha sem conversão, retorna um valor string para a variável
+    //var n2 = window.prompt('Digite outro número') linha sem conversão, retorna um valor string para a variável
+    var n1 = Number.parseFloat(window.prompt('Digite um número'))//linha convertida antes de ir para a variável
+    var n2 = Number.parseFloat(window.prompt('Digite outro número'))//
+    var soma = n1 + n2
+    window.alert(nome + ', o resultado dessa soma é ' + soma)
+</script>
+
 </body>
 </html>
