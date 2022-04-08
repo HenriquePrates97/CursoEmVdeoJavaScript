@@ -58,7 +58,40 @@
             <h2>Formatando numbers</h2>
                 <p>Algumas formatações são possíveis para as variáveis do tipo number, uma delas é a opção de aumentar o tamanho da casa decimal de um número utilizando toFixed(n) onde dentro do paranteses vai a quantidade de casas decimais.</p>
                 <p>Outra forma de formatar um number é caso ele seja um valor monetário, onde podemos utilizar a seguinte linha de código para mostrar o número já com a formatação da moeda de determinado país: var.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})</p>
-<script>
+        <h1>Operadores em JS</h1>
+            <p>Operadores são ...</p>
+            <ul>
+                <li>aritiméticos</li>
+                <li>atribuição</li>
+                <li>relacionais</li>
+                <li>lógicos</li>
+                <li>ternário</li>
+            </ul>
+            <h2>Operadores aritiméticos</h2>
+                <p>Os operadores aritiméticos em JavaScript são utilizados para fazer cálculos matemáticos, e eles são:</p>
+                <ul>
+                    <li><abbr title="Soma">+</abbr></li>
+                    <li><abbr title="Subtração">-</abbr></li>
+                    <li><abbr title="Multiplicação">*</abbr></li>
+                    <li><abbr title="Divisão real">/</abbr></li>
+                    <li><abbr title="Divisão inteira">%</abbr></li>
+                    <li><abbr title="Potência">**</abbr></li>
+                </ul>
+                <h2>Divisão inteira (%)</h2>
+                    <p>Na linguagem JavaScript, o simbolo de porcentagem faz uma operação de divisão chamada divisão inteira, onde, diferente da divisão real, representada pelo simbolo de barra (/) padrão, que retorna como resultado um número com vírgula caso necessário, a divisão inteira retorna o resto da divisão que necessite de vírgula para ser completada. Por exemplo, na divisão 5/2, o resultado real é 2,5, já no caso de uma divisão inteira, o resultado seria 1, pois só é possivel chegar até o resto 1 sem colocar vírgula para continuar a operação. Caso continue duvida, vide vídeo #07 do curso de JS.</p>
+                <h2>CUIDADO</h2>
+                    <p>Assim como na matemática padrão, os operadores aritiméticos seguem uma precedencia para fazer as operações, sendo assim, multiplicação e divisão tem prioridade e parenteses adiciona prioriadade à uma operação.</p>
+                    <p>Para ficar mais claro, a ordem de precedencia é a seguinte: primeiro parenteses, depois potencia, após vem multiplicação, divisão real e divisão inteira, essas tem o mesmo nível de precedencia, sendo realizadas da esquerda para direita caso haja mais de uma na expressão, após vem somar e subtrair, na mesma ordem de precedencia e realizadas da esquerda para direita caso haja mais de uma na expressão.</p>
+            <h2>Operadores de atribuição</h2>
+                <p>Para guardarmos os valores que geramos utilizamos os operadores de atribuição</p>
+                <ul>
+                    <li><abbr title="Recebe">=</abbr></li>                    
+                </ul>
+                <p>Atribuição simples é aquela que digitamos o valor para uma variável ou colocamos nela um valor final de uma operação</p>
+                <p>Auto-atribuição é quando declaramos que uma variável receberá o valor dela mesmo juntamente com alguma outra caracteristica, por exemplo, se eu declarar uma variável x e atribuir a ela o valor de 5, ficando var x = 5, fizemos uma atribuição simples. Agora se eu quiser adicionar 3 ao valor de x, fica x = x + 3, ou seja, a variável x passará a valer 8. Isso é uma auto-atribuição. Há uma simplificação que pode ser feita na sintaxe dessa auto-atribuição, onde uma variável que receberá ela mesmo juntamente com outra caracteristica poderá ser representada por x "operador aritimético"= valor atribuido. Seguindo o exemplo usado acima, a versão simplificada seria x += 3. Se fosse uma subtração ficaria x -= 3, se fosse uma divisão seria x /= 3 e assim por diante com todos os operadores aritiméticos</p>
+                <h2>Operador de incremento/decremento</h2>
+                    <p>Caso desejamos aumentar ou diminuir apenas uma unidade de uma variável, ou seja, fazer um x = x + 1 ou x = x - 1, podemos simplificar mais ainda do que só fazer x += 1 ou x -=1 como aprendemos anteriormente, para isso, podemos fazer x++ ou x--, + para adição, - para subtração.</p>
+    <script>
     //window.alert('Vamos começar essa bagaça')
     //window.confirm('Está gostando do curso?')
     //window.prompt('Digite seu nome!')
