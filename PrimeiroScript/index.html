@@ -91,7 +91,41 @@
                 <p>Auto-atribuição é quando declaramos que uma variável receberá o valor dela mesmo juntamente com alguma outra caracteristica, por exemplo, se eu declarar uma variável x e atribuir a ela o valor de 5, ficando var x = 5, fizemos uma atribuição simples. Agora se eu quiser adicionar 3 ao valor de x, fica x = x + 3, ou seja, a variável x passará a valer 8. Isso é uma auto-atribuição. Há uma simplificação que pode ser feita na sintaxe dessa auto-atribuição, onde uma variável que receberá ela mesmo juntamente com outra caracteristica poderá ser representada por x "operador aritimético"= valor atribuido. Seguindo o exemplo usado acima, a versão simplificada seria x += 3. Se fosse uma subtração ficaria x -= 3, se fosse uma divisão seria x /= 3 e assim por diante com todos os operadores aritiméticos</p>
                 <h2>Operador de incremento/decremento</h2>
                     <p>Caso desejamos aumentar ou diminuir apenas uma unidade de uma variável, ou seja, fazer um x = x + 1 ou x = x - 1, podemos simplificar mais ainda do que só fazer x += 1 ou x -=1 como aprendemos anteriormente, para isso, podemos fazer x++ ou x--, + para adição, - para subtração.</p>
+            <h2>Operadores relacionais</h2>
+                <p>Operadores relacionais são utilizados para fazer uma relação entre determinadas variáveis</p>
+                <p>Eles são:</p>
+                <ul>
+                    <li><abbr title="maior que...">></abbr></li>
+                    <li><abbr title="menor que..."><</abbr></li>
+                    <li><abbr title="maior ou igual">>=</abbr></li>
+                    <li><abbr title="menor ou igual"><=</abbr></li>
+                    <li><abbr title="igual">==</abbr></li>
+                    <li><abbr title="diferente">!=</abbr></li>
+                </ul>
+                <p>IMPORTANTE!!! Para toda expressão que tem um operador relacional ligada à ela, o resultado da expressão vai ser um valor booleano, ou seja, verdadeiro ou falso.</p>
+                <p>Se uma expressão possuir operadores relacioanais e operadores aritiméticos ao mesmo tempo, será feita primeiro a operação aritmética para depois fazer a operação relacional.</p>
+                <h3>Operadores relacionais de identidade</h3>
+                    <p>O operador relacional de igualdade não testa o tipo da variável, se ela é number, string, object, enfim, caso tenhamos a seguinte expressão 5 == '5', onde o segundo 5 é do tipo string, a resposta ainda assim é true, pois o valor das duas variáveis são iguais, independente do tipo. Agora, caso tenhamos que testar se o valor e o tipo das variáveis são iguais para podermos dar o resultado, ai utilizamos o operador relacional de identidade, que em vez de dois sinais de igual (==) são três sinais (===). Na expressão do exemplo, 5 === '5' seria falso, pois o tipo da variável seria levado em consideração para determinar se os elementos são iguais, e como o cinco entre aspas simples é do tipo string, já nos retorna um valor false.</p>
+                    <p>Isso serve também para o operador relacional de diferença, onde o valor 5!='5' retorna false pois o valor dos dois elementos são iguais, mas se utilizarmos 5!=='5' o resultado retorna true, pois o tipo dos elementos são sim diferentes. </p>
+            <h2>Operadores lógicos</h2>
+                <p></p>
+                <ul>
+                    <li><abbr title="negação">!</abbr></li>
+                    <li><abbr title="conjunção">&&</abbr></li>
+                    <li><abbr title="disjunção">||</abbr></li>
+                </ul>
+                <h3>Conjunção &&</h3>
+                    <p>Também conhecida por "e", faz com que a condição do operador só seja satisfeita se todas as condições forem atendidas, por exemplo, se eu peço uma caneta azul e uma vermelha, só tenho satisfação se receber uma caneta azul e uma vermelha, o que gera um resultado true, caso contrário, a condição não foi atendida e o resultado é false.</p>
+                <h3>Disjunção ||</h3>
+                    <p>Também conhecida por "ou", faz com que a condição do operador seja satisfeita se uma das condições forem atendidas, não tendo necessidade de atender as outras, por exemplo, se eu peço uma caneta azul ou vermelha, ficarei satisfeito se receber uma azul ou uma vermelha, tanto faz, isso já retornaria o resultado true, agora se nenhuma das condições forem atendidas, ai o resultado é false.</p>
+        <h1>IMPORTANTE</h1>
+            <p>Quando temos operadores relacionais, aritiméticos e lógicos na mesma expressão, a ordem de resolução deles é: primeiro os aritiméticos, segundo os relacionais e por último os lógicos, no caso da expressão a > b && b % 2 == 0, sendo que a vale 5 e b vale 8. Primeiro verificamos o valor do resultado de b % 2, que dá 0, seguindo, verificamos de 0 é igual à 0, então, do lado direito do operador lógico da expressão, que foi onde começamos pois havia um operador aritimético, temos true como resultado. Agora fazemos o lado esquerdo ao operador lógico, onde avaliamos se a > b, ou seja, se 5 é maior que 8, no caso, 5 não é maior que 8, então retorna o valor false. Para finalizar, verificamos se o operador lógico de conjunção teve suas duas condições atendidas, retornando true nos dois lados da expressão, no lado direito tivemos false e no lado esquerdo tivemos true, logo, esse operador retorna o valor false, pois um dos lados não atendeu a condição.</p>
+            <p>Já se houver mais de um operador lógico na expressão, a ordem de resolução é primeiro o negação, depois a conjunção e por ultimo a disjunção.</p>
+            <h2>Operador ternário</h2>
+                <p>Operador ternário é um operador de três partes, e possui o simbolo de interrogação (?) e de dois pontos (:) em sua composição. Ele basicamente irá determinar qual valor uma variável receberá de acordo com o resultado de uma operação. Onde o que vem após a interrogação determinará o que acontecerá se o valor testado for true, e os dois pontos determinará o que a variável receberá se o valor for false. Vamos à uma exemplificação para ficar mais fácil: var n = 5>8?6:10. Podemos ler da seguinte maneira: variável n recebe 5 maior que 8, se true coloque o valor 6 na variavél n se false coloque o valor 10 na variável n. No caso, se eu pedir para mostrar o valor de n, o valor mostrado será 10, pois a variável recebeu 10 devido ao teste de 5 maior que 8 ser false.</p>
+
     <script>
+    /*
     //window.alert('Vamos começar essa bagaça')
     //window.confirm('Está gostando do curso?')
     //window.prompt('Digite seu nome!')
@@ -102,6 +136,7 @@
     var n2 = Number.parseFloat(window.prompt('Digite outro número'))//
     var soma = n1 + n2
     window.alert(nome + ', o resultado dessa soma é ' + soma)
+    */
 </script>
 
 </body>
