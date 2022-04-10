@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: aqua;
+            color:rgb(207, 33, 193);
+            font: normal 18px arial;
+        }
+        img{
+            max-width: 300px;
+        }
+        div.container{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            
+        }
+        div.area{
+            max-width: 300px;
+            min-height: 300px;
+            background-color: tomato;
+            margin: 0 auto;
+            border-radius: 50%;
+            text-align: center;
+            color: purple;
+            font: bold 25px 'arial';
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 300px;
+        }
+    </style>
+    <title>Módulo C</title>
+</head>
+<body>
+    <h1>Vamos iniciar os estudo com DOM (Document Object Model)</h1>
+        <p>O DOM é a vertente web do JavaScript, pro qual a linguagem foi criada, é uma poderosa ferramente que está dentro do navegador, um conjunto de objetos do JavaScript para o tratamento de componentes visuais, para criarmos aplicações mais bonitinhas. Em suma, é atráves do DOM que iremos acessar todos os componentes do site, como por exemplo o próprio HTML, para que possamos fazer alterações nele de acordo com condições em JavaScript.</p>
+    <h2>Árvore DOM</h2>
+        <p>A árvore DOM, assim como uma árvore genealógica, é utilizada para sabermos a precedencia de cada objeto do nosso site, começando pela raiz, que é o window, ou seja, a janela do nosso site é o objeto raiz da árvore e dela é derivada todos os outros objetos. Logo abaixo da raiz temos três objetos principais dessa árvore, que são o location, que é responsável por toda a localização do nosso site, como URL, qual foi a página anterior, qual a página atual; temos o document, que terá uma utilização enorme para integração dos código, se refere ao documento html atual que está sendo utilizado; a history, que faz o armazenamento de informações, como por exemplo, de onde você veio até a página, para onde você vai, entre outras... e existe uma quantidade enorme de outros objetos derivados de window, mas agora nos atentaremos a esses.</p>
+        <p>Descendo mais um pouco pela árvore, derivando de document, temos o objeto HTML, que como dito anteriormente é o nosso documento atual. E dentro de HTML, descendo novamente na árvore, temos a tag head, que comporta o nome da aba no navegador e todos os metadados para o documento, e o body, que é o corpo do nosso documento, onde todo o código é desenvolvido e o próprio script de JavaScript está contido. Dentro do objeto head, temos as tags meta, title, que viram objetos também se tratando de árvore DOM. Dentro de body, temos todas as tags que podemos adicionar dentro dele como sendo objetos filhos de body.</p>
+        <p>É importante salientar que: todo objeto que está diretamente abaixo de outro objeto é denominado child do objeto acima, ou seja, filho desse objeto, e todo objeto que está acima de algum outro, é denominado parent desse objeto, ou seja, pai (ou mãe) desse objeto.</p>
+        <img src="imagens/arvoreDOM.jpeg" alt="Imagem DOM">
+        <h3 id="h3">Selecionadores de elementos</h3>
+            <p>É possivel selecionar um objeto DOM para fazer a navegação dentro da árvore, e existem vários metodos para isso, mas agora vamos ver 5 deles.</p>
+            <ul>
+                <li><abbr title="getElementsByTagName()">Marca (tag em si): </abbr>onde é possível acessar todos os objetos com a mesma tag. Colocamos o nome da tag dentro de parenteses e aspas simples ('tag') para selecionar a tag desejada. Como o elements está no plural, ele vai pegar todas as tags do mesmo tipo que estiverem no código, se desejar apenas uma em específico, é possivel, ao lado o parenteses, entre colchetes, colocar um número referente a posição do elemento dentro do código, sendo o primeiro elemento o 0, o segundo o 1 e assim sucessivamente.</li>
+                <li><abbr title="getElementById()">ID</abbr>(usando uma identificação única para o objeto através de um ID)</li>
+                <li><abbr title="getElementsByName()">Nome</abbr></li>
+                <li><abbr title="getElementsByClassName()">Classe</abbr></li>
+                <li><abbr title="querySelector() ou querySelectorAll()">Seletor:</abbr> utiliza a mesma sintaxe do CSS, onde podemos utilizar id ou class para selecionar um objeto, precisamos apenas dizer dentro de parenteses entre aspas simples o id ou a class do objeto, colocando na frente a cerquilha se for id ou o ponto se for class, sendo possível até, para uma precisão maior na seleção, assim como no CSS, colosar antes da cerquilha ou do ponto o tipo da tag que está sendo usada no objeto.</li>
+            </ul>
+
+    <h1 name="titulo">Primeiro exercicio</h1>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+        <div id="msg">Clique aqui</div>
+
+
+    <h1>Eventos DOM</h1>
+        <p>Eventos são todas as coisas que podem acontecer com qualquer elemento, como o chegar próximo do cursor do mouse, que dispara o evente mouseenter, ou se eu mantenho o mouse passando por dentro do objeto, que dispara o mousemove, se eu clicar e segurar o botão esquerdo do mouse, que dispara o mousedown, ou quando eu solto o botão, eu disparo o evento mouseup, ou quando eu apenas clico e solto, que dispara o evento click, ou quando eu retiro o mouse de dentro do meu elemento, que dispara o evento mouseout, enfim, as possibilidades de evento são enormes, só dar uma procurada para estudar.</p>
+        <p>Os eventos são criados em forma de uma função em JS, onde atribuimos um nome à ela, e podemos disparar o evento diretamente no HTML ou pelo JavaScript, isso depende do programador. Se decidirmos por disparar no HTML, devemos, dentro de maior ou menor da tag, colocar o tipo de disparador que será usado, e colocar o nome da função, vide exemplo abaixo.</p>
+        <p>Para disparar o evento através do JS, o que é até mais aconselhado para deixar o HTML mais clean, utilizamos os event listener, que nada mais são que monitoradores das ação que determinamos e checam se elas foram feitas para ativar o evento ou não, a sintaxe é nomedavariável.addEventListener('disparadordoevento', funçãoqueleexecutará)</p>
+        <div class="container">
+            <div class="area" id="area1" onclick="clicar()">
+                interaja...
+            </div>
+            <div class="area" id="area2">
+                interaja...
+            </div>
+        </div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[5]
+        //window.document.write(p1.innerText) //para mostrar o conteúdo de uma tag que foi colocada em uma váriavel, utilizamos innerText.
+        var mensagem = window.document.getElementById('msg')
+        mensagem.style.color = 'green'
+        //window.document.write(mensagem.innerText)
+
+        var titulo = window.document.getElementsByName('titulo')[0]
+       //window.document.write(titulo.innerText)
+
+        var h3 = window.document.querySelector('#h3')
+        h3.style.background = 'yellow'
+        //window.document.write(h3.innerText)
+
+        //Eventos DOM
+
+        
+        function clicar(){ 
+           var area1 = window.document.getElementById('area1')           
+           area1.style.background = 'blue'
+           area1.style.color = 'yellow'
+        }
+
+        var area2 = window.document.getElementById('area2')
+        area2.addEventListener('click', clicar2)
+        area2.addEventListener('mouseenter', clicar2)
+        area2.addEventListener('mouseout', desclicar)
+
+        function clicar2(){
+            area2.style.background = 'blue'
+            area2.style.color = 'yellow'
+        }
+        function desclicar(){
+            area2.style.background = 'tomato'
+            area2.style.color = 'purple'
+        }
+    </script>
+<h1>Veja o próximo exemplo <a href="calc.html">aqui</a></h1>
+</body>
+</html>
