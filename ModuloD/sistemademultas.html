@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran-SC</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+        <p>Digite abaixo a velocidade que você passou que diremos se você foi multado ou não</p>
+    <input type="text" name="txtvel" id="txtvel">
+    <label for="txtvel">A qual velocidade você passou?</label>
+    <input type="button" value="Pesquisar" id="btnpesq" onclick="pesquisar()">
+    <p id="res"></p>
+
+    <script>
+       function pesquisar(){
+        var txtvel = document.getElementById('txtvel')
+        var res = document.getElementById('res')
+        var vel = Number(txtvel.value)
+        res.innerHTML = `Sua velocidade foi de ${vel}km/h`
+        res.innerHTML += '<p>Dirija sempre com cinto de segurança</p>'
+            if (vel > 80){
+                res.innerHTML += '<p>Você foi multado por excesso de velocidade</p>'
+                if (vel >= 200){
+                    res.innerHTML += '<p>Aposto que tava dirigindo um uno com escada, caralho, tava rápido, hein </p>'
+                }
+            }else{
+                res.innerHTML += `<p>Você passou a ${vel}km/h e não foi multado</p>`
+            }  
+        }
+    </script>
+    <h1>Veja abaixo o exemplo de países</h1>
+        <a href="paises.html">Países</a>
+    <h1>Ou volte para o menu</h1>
+        <a href="index.html">Menu</a>
+</body>
+</html>

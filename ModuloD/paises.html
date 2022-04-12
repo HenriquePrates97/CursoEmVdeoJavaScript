@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quero saber seu país</title>
+</head>
+<body>
+    <h1>De qual país você é?</h1>
+        <p>Conte um pouco sobre você informando de qual país você é</p>
+    <input type="text" id="txtp">
+    <label for="txtp">Qual o nome do seu país?</label>
+    <input type="button" value="Checar" onclick="checar()">
+    <p id="res"></p>
+
+    <script>
+        function checar(){
+            var txtp = document.querySelector('input#txtp')
+            var res = document.querySelector('p#res')
+            res.innerHTML = `Seu país é ${txtp.value}`
+
+            if(txtp.value == 'Brasil' || txtp.value == 'brasil'){
+                res.innerHTML += `<p>Você é brasileiro</p>`
+            }else{
+                res.innerHTML += `<p>Você é estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
