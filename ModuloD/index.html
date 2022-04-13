@@ -13,8 +13,26 @@
             <p>A condição que desejamos será utilizada na seguinte sitaxe utilizando o código if, onde dentro de parenteses vai a tal condição que queremos atender para prosseguir com o código: if(condição). Abrimos um bloco para o código, que nada mais é que a abertura e fechamento de chaves, e dentro desse primeiro bloco colocamos o código que queremos executar caso a condição seja verdadeira, ou seja, seja atendida. Ao final da chave do primeiro bloco, escrevemos a palavra else e abrimos e fechamos chaves também, e nesse bloco colocamos o código para execução caso a condição seja falsa, ou seja, não foi atendida</p>
             <img style="width: 300px;" src="imagens/IfElse.jpeg" alt="If e Else em JavaScript">
         <h2>Tipos de condição</h2>
-            <p>Caso a condição não tenha um bloco para executar quando ela for falsa, chamamos de condição simples, onde somente o if é utilizado juntamente com a condição. Nesse caso, se a condição não for atendida o código simplesmente continua executando as demais linhas que vem a seguir, mas se a condição for atendida, o bloco é executado e o código também continua normalmente após a execução do mesmo</p>
-            <p>Agora, quando temos uma condição onde tanto se for verdadeira quanto se for falsa tem um código a ser executado, nesse caso utilizando o if e o else, temos uma condição composta</p>
+            <h3>Condição Simples</h3>
+                <p>Caso a condição não tenha um bloco para executar quando ela for falsa, chamamos de condição simples, onde somente o if é utilizado juntamente com a condição. Nesse caso, se a condição não for atendida o código simplesmente continua executando as demais linhas que vem a seguir, mas se a condição for atendida, o bloco é executado e o código também continua normalmente após a execução do mesmo</p>
+            <h3>Condição Composta</h3>
+                <p>Agora, quando temos uma condição onde tanto se for verdadeira quanto se for falsa tem um código a ser executado, nesse caso utilizando o if e o else, temos uma condição composta</p>
+            <h3>Condição Aninhada</h3>
+                <p>Temos a possibilidade de colocar uma condição dentro da outra, criando assim mais possibilidades de caminhos para nosso código, quando fazemos isso, estamos aninhando uma condição dentro da outra e utilizamos a seguinte sintaxe:</p>
+                <img style="width: 300px;" src="imagens/CondicaoAninhada.jpeg" alt="Condição Aninhada">
+                <p>Não há necessidade de abrir um bloco para o else e colocar o if, podemos reduzir isso para else if, colocando a consição e ai sim abrindo mais um bloco, ficando 
+                    <code>
+                        if(){
+
+                        }else if(){
+
+                        }
+                    </code>
+                </p>
+            <h3>Condicão multipla</h3>
+                <p>A condição multipla é muito situacional, pois é utilizada para valores fixos, quando quero trabalhar apenas valores sem intervalos. Utilizamos uma expressão que será testada, e o resultado dessa expressão é o que vai determinar para onde o código vai seguir. A sintaxe é a seguinte, utilizamos a palavra switch e entre parenteses colocamos a expressão, abrimos o bloco com chaves e dentro dele colocamos os valores utilizando o case antes dele. Temos um valor padrão que usamos o default no lugar do case e colocamos o código que queremos executar caso nenhum dos valores seja resultado</p>
+                <img style="width: 300px;" src="imagens/CondicaoMultipla.jpeg" alt="Condição Multipla">
+                <p>Importante: ao final de cada case precisamos obrigatóriamente colocar o comando break, para que o código para se ser lido assim que executar a condição desejada e continue o seu fluxo normalmente saindo do switch.</p>
     <h1>Veja abaixo o exemplo criado</h1>
         <a href="sistemademultas.html">Sitema de multas</a><br>
         <a href="paises.html">Paises</a>
