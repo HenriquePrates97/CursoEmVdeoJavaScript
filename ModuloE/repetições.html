@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições e JavaScript</title>
+</head>
+<body>
+    <h1>Vamos falar um pouco sobre repetições, também chamadas de laços, em JavaScript</h1>
+    <h2>Repetição "Enquanto" (while)</h2>
+        <p>A repetição começa exatamente como uma condição, ou seja, ele testa uma expressão, e, enquanto essa expressão for verdadeira, o bloco da repetição é executado novamente, em loop, se repetindo até que o teste da repetição retorne um valor falso, nesse caso, o loop é quebrado e o código segue a sequência de execução normalmente. Essa estrutura de repetição é a mais comum, existem outras, mas essa é a mais utilizada</p>
+        <p>A repetição, escreve-se com a palavra while, seguida da expressão dentro de parenteses, abrimos um bloco para codificarmos o que será executado e assim temos a repetição.</p>
+        <p>No caso acima, o bloco de código só será executado caso o teste lógico retorne verdadeiro, como já dito anteriormente, mas há a possibilidade de executarmos o bloco primeiro pra só depois testarmos a condição e o loop começar caso retorne verdadeiro. Para isso, começamos o bloco escrevendo a palavra "do" (faça em inglês) e dentro do bloco colocamos o código, ao fechar das chaves, ai sim adicionamos o while juntamente com a condição. Nesse caso, se o teste retornar verdadeiro, o bloco acima será executado mais uma vez, até que o teste retorne falso.</p>
+    <h2>Repetição "For"</h2>
+        <p>A repetição for tem a mesma finalidade que as anteriores, mas a diferença é que colocamos a inicialização desse código, como por exemplo a variável recebendo o valor desejado, adicionamos a condição lógica e por final adicionamos o incremento que desejamos, tudo isso dentro de parenteses ao lado de for e separados por ponto e virgula: for(inicio; condição; incremento). A estrutura dessa repetição começa a ser executada com a inicialização, passando pela condição, se a condição for verdadeira, o bloco de código é executado, terminando de executar o bloco, o incremento do for é adicionado à inicialização e o loop começa, terminando caso o teste lógico retorne falso.</p>
+    
+    <h1>Vamos exemplificar</h1>
+    <input type="number" name="qtdFatias" id="qtdFatias">
+    <label for="qtdFatias">Digite aqui a quantidade de fatias da pizza</label>
+    <input type="button" value="Enviar" id="enviar">
+    <p id="res">Resultado</p>
+    <p id="cont">Contador</p>
+
+    <script>
+        var enviar = document.querySelector('input#enviar')
+        enviar.addEventListener('click', pizza)
+        function pizza(){
+            var qtdFatias = document.querySelector('input#qtdFatias').value
+            var cont = document.querySelector('p#cont')
+            var res = document.querySelector('p#res')
+            res.innerHTML = `O valor é ${qtdFatias}`
+
+            while(qtdFatias != 0){
+                cont.innerHTML = qtdFatias
+                qtdFatias -= 1
+            }
+        }
+    </script>
+</body>
+</html>
