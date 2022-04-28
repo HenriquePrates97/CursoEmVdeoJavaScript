@@ -19,8 +19,8 @@
     <input type="number" name="qtdFatias" id="qtdFatias">
     <label for="qtdFatias">Digite aqui a quantidade de fatias da pizza</label>
     <input type="button" value="Enviar" id="enviar">
-    <p id="res">Resultado</p>
-    <p id="cont">Contador</p>
+    <p id="res">Resultado: </p>
+    <p id="cont">Contador: </p>
 
     <script>
         var enviar = document.querySelector('input#enviar')
@@ -29,11 +29,12 @@
             var qtdFatias = document.querySelector('input#qtdFatias').value
             var cont = document.querySelector('p#cont')
             var res = document.querySelector('p#res')
-            res.innerHTML = `O valor é ${qtdFatias}`
+            res.innerHTML = `O valor é: ${qtdFatias}`
 
             while(qtdFatias != 0){
-                cont.innerHTML = qtdFatias
-                qtdFatias -= 1
+                qtdFatias--
+                cont.innerHTML += `${qtdFatias} `
+                
             }
         }
     </script>
