@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis Compostas (Arrays)</title>
+</head>
+<body>
+    <h1>Variáveis compostas vs simples</h1>
+        <p>A definição de variáveis compostas se dá pela diferenciação básica das simples, ou seja, se nas variáveis simples eu posso apenas armazenar uma informação por vez, nas compostas eu posso armezenar mais de uma informação por vez sem problema algum. Ela é capaz de ir armazenando informações que são determinadas para ela toda vez que for necessário</p>
+        <p>Dependendo do nosso código, a quantidade de variáveis simples pode ser muito grande, sendo necessário escrever muitas linhas apenas declarando variáveis, com as arrays é possível diminuir a quantidade de declarações utilizando apenas uma variável para várias informações</p>
+        <p>A declaração de uma array é muito simples, digitamos var, let ou const, e escrevemos o nome do identificador da variável, e utilizamos o sinam de atribuição (=), após, abrimos colchetes([]) e dentro dos colchetes, separados por vírgula, digitamos as informações que desejamos e cada informação dessa recebe um índice, para sabermos a posição dela dentro do array, começando com indice 0. Segue exemplo: var a = [12, 136, 450, 8746] onde o 12 tem indice 0, o 136 tem o indice 1, 450 indice 2 e 8746 indice 3.</p>
+        <p>Array em portugês significa vetor, quando ouvimos "vetor", nada mais é que um array, que é composto de elementos, que armazenam o espaço na memória juntamente com o valor interno desse elemento e o indíce que o identifica. </p>
+        <p>Parafraseando o Guabanara: "Um array é uma variável que tem vários elementos, cada elemento é composto por seu valor e por uma chave de identificação"</p>
+        <h2>Acrescentando valores no array</h2>
+            <p>Para acrescentar um valor a uma array, sem perder o que temos armazenado, utilizamos o seguinte conceito: determinamos o indice que ainda não foi criado dentro de colchetes após o nome da variável determinada, para que o js crie esse novo elemento e armazene a informação desejada no elemento. Seguindo o exemplo acima, ficaria assim: 
+            var a = [12, 136, 450, 8746] 
+            a[4] = 23
+            Isso significa que, na nossa variável temos apenas 4 indices, o 0 o 1 o 2 e o 3, e eles já estão com valores armazenados, para que adicionar mais valores a essa mesma variável, eu atribuo o valor a um indice que não existe ainda, que no caso é o 4, então o valor 23 será atribuido ao quarto indice, ficando a variável assim:
+            var a = [12, 136, 450, 8746, 23]. Veja o código HTML para ficar mais nítida a informação, Henrique.
+            </p>
+            <p>Caso o valor/informação que desejamos adicionar precisa necessáriamente estar sempre no último indice e eu não sei qual o número desse indice, utilizamos o seguinte conceito: a.push(valor/informação aqui). Nesse caso o JS criará mais um elemento que terá o ultimo valor possivel de indice, para deixar o valor por último.</p>
+        <h2>Sebendo o comprimento de um array (quantidade de elementos que a variável possiu)</h2>
+            <p>Para saber o comprimento de um array, utilizamos o length após o nome da variável que desejamos saber o comprimento. Muito cuidado com a escrita de length, pois é muito comum trocar a posição do th no final e isso causa um não funcionamento dessa parte do código. Também temos que nos atentar que nesse length não temos parenteses no final, ficando, no exemplo acima: a.length</p>
+        <h2>Organizando os elementos do array por ordem crescente</h2>
+            <p>Para que os elementos dentro do array tenham uma ordem crescente, utilizamos o método sort() após o identificador da variável, ficando assim: a.sort(). Por ser um método em JS, o sort precisa terminar com parenteses, sem a necessidade de colocar valores dentro</p>
+        <h2>Buscando valores dos indices dos elementos</h2>
+            <p>Para sabermos qual o número do indice de determinado elemento, utilizamos o comando indexOf(elemento que queremos saber o indice). No exemplo acima, se quisermos saber qual o indice de 136, digitamos a.indexOf(136) o JS retornará o número 1, que é o indice de 136.</p>
+</body>
+</html>
